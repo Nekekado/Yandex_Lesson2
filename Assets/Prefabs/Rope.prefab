@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7990779954585545789}
   - component: {fileID: 7990779954585545790}
   - component: {fileID: 346830691477766236}
+  - component: {fileID: 6315208533768226488}
   m_Layer: 0
   m_Name: PieceOfRope 4
-  m_TagString: EndOfRope
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,10 +123,10 @@ DistanceJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Anchor: {x: 0, y: 0.49999988}
+  m_ConnectedAnchor: {x: 0, y: -0.5000001}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.8146142
+  m_Distance: 0.0396142
   m_MaxDistanceOnly: 0
 --- !u!61 &346830691477766236
 BoxCollider2D:
@@ -153,6 +154,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2545298, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6315208533768226488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990779954585545776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe06ad18ca486474eb6dcfae2dd4e54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7990779955208378488
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,10 +288,10 @@ DistanceJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Anchor: {x: -0.00000035973153, y: 0.49999988}
+  m_ConnectedAnchor: {x: 0, y: -0.5}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.9215419
+  m_Distance: 2.645958
   m_MaxDistanceOnly: 0
 --- !u!61 &5908997860517831047
 BoxCollider2D:
@@ -428,10 +441,10 @@ DistanceJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Anchor: {x: 0, y: 0.5}
+  m_ConnectedAnchor: {x: 0, y: -0.5}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.81461453
+  m_Distance: 0.03961456
   m_MaxDistanceOnly: 0
 --- !u!61 &8616895994058696747
 BoxCollider2D:
@@ -617,10 +630,10 @@ DistanceJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Anchor: {x: 0, y: 0.5}
+  m_ConnectedAnchor: {x: 0, y: -0.5}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.8245481
+  m_Distance: 0.04954815
   m_MaxDistanceOnly: 0
 --- !u!61 &9150291144911401553
 BoxCollider2D:
@@ -770,10 +783,10 @@ DistanceJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Anchor: {x: 0, y: 0.49999994}
+  m_ConnectedAnchor: {x: 0, y: -0.4999999}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.8046813
+  m_Distance: 0.029681444
   m_MaxDistanceOnly: 0
 --- !u!61 &5587606217778825986
 BoxCollider2D:

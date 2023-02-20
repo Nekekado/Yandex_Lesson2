@@ -13,9 +13,12 @@ GameObject:
   - component: {fileID: 3927203807740105308}
   - component: {fileID: 3927203807740105307}
   - component: {fileID: 3927203807740105305}
+  - component: {fileID: 992254255}
+  - component: {fileID: 992254256}
+  - component: {fileID: 992254257}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,7 +128,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: -0.000000059604645}
   m_AutoConfigureDistance: 1
-  m_Distance: 3.3749197
+  m_Distance: 0.9747081
   m_MaxDistanceOnly: 0
 --- !u!70 &3927203807740105305
 CapsuleCollider2D:
@@ -143,3 +146,42 @@ CapsuleCollider2D:
   m_Offset: {x: -0.022586478, y: -0.09460379}
   m_Size: {x: 0.5200748, y: 0.8107914}
   m_Direction: 0
+--- !u!114 &992254255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927203807740105311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dd4f7b3e1afa4695b944608e8b5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentRope: {fileID: 0}
+--- !u!114 &992254256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927203807740105311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a54063d361458134cb46658a015701ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _swiningPower: 5
+--- !u!114 &992254257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3927203807740105311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf3a35b36469a147bee94bf36a964b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _unhookFromRope: {fileID: 992254255}
