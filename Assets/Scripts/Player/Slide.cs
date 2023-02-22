@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class Slide : MonoBehaviour
     [SerializeField] private Vector2 _velocity;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private float _speed;
+    [SerializeField] private float _heighJump = 1f;
+    [SerializeField] private float _durationJump = 1f;
 
     private Rigidbody2D _rb2d;
 
@@ -40,11 +43,16 @@ public class Slide : MonoBehaviour
         Vector2 alongSurface = Vector2.Perpendicular(_groundNormal);
 
         _targetVelocity = alongSurface * _speed;
+
+        if (Input.GetKeyDown(KeyCode.Space) && _grounded)
+        {
+            StartCoroutine(JumpRoutine());
+        }
     }
 
     private void FixedUpdate()
     {
-        _velocity += _gravityModifier * Physics2D.gravity * Time.deltaTime; // Зачем 2 Time.deltaTime?
+        _velocity += _gravityModifier * Physics2D.gravity * Time.deltaTime;
         _velocity.x = _targetVelocity.x;
 
         _grounded = false;
@@ -109,5 +117,20 @@ public class Slide : MonoBehaviour
         }
 
         _rb2d.position = _rb2d.position + move.normalized * distance;
+    }
+
+    private IEnumerator JumpRoutine()
+    {
+        float timeEnd = Time.time + _durationJump;
+        float heighPerFixedFrame = _heighJump / _durationJump * Time.fixedDeltaTime;
+
+        while (Time.time < timeEnd)
+        {
+            _velocity.y += heighPerFixedFrame;
+
+            yield return new WaitForSeconds(Time.fixedDeltaTime);
+        }
+
+        StopCoroutine(JumpRoutine());
     }
 }
